@@ -80,7 +80,19 @@ Python · Ollama · FAISS · sentence-transformers · FastAPI
 
 ## What I Learned
 
-TBD — will be updated after completion.
+An agent is not a model — it is a reasoning loop with tools.
+The same LLM that answers questions can also decide which tool to use,
+execute it, and incorporate the result into its response.
+
+Tool selection depends on prompt design.
+A vague system prompt produces vague tool use.
+Explicit examples in the prompt dramatically improve reliability.
+
+The hardest part is the reasoning loop — not the tools themselves.
+Each tool is simple. Making the agent choose the right one consistently is the challenge.
+
+Tests for tools are independent of the LLM — fast and reliable.
+Tests for the agent's reasoning require the LLM — slow and non-deterministic.
 
 ---
 
